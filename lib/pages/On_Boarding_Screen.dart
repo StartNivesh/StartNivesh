@@ -11,7 +11,7 @@ class OnBoarding extends StatelessWidget {
       title: 'Welcome to Start Nivesh',
       body: 'Explore a world of financial opportunities with Start Nivesh.',
       image: Center(
-        child: Image.asset('assets/START.png',
+        child: Image.network('https://drive.google.com/uc?export=view&id=1u4VctF4pLUZwMeD8lnchvM8DaWDRC1J3',
           height: 260,
         ),
       ),
