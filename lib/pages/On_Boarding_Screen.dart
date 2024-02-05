@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:start_nivesh/HomeScreen.dart';
+import 'package:start_nivesh/RoleSelection.dart';
 
 class OnBoarding extends StatelessWidget {
   OnBoarding({super.key});
@@ -55,6 +56,7 @@ class OnBoarding extends StatelessWidget {
     ),
   ];
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,7 +74,14 @@ class OnBoarding extends StatelessWidget {
           activeColor: Colors.lightBlue,
         ),
         showDoneButton: true,
-        done: const Text("Get Started", style: TextStyle(fontSize: 15),),
+        done: TextButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const RoleSelection()),
+              );
+            },
+        child: const Text("Get Started", style: TextStyle(fontSize: 15),)),
         showSkipButton: true,
         skip: const Text('Skip', style: TextStyle(fontSize: 16)),
         showNextButton: true,

@@ -42,6 +42,9 @@ dependencies:
   # OnBoarding Screen
   introduction_screen: ^3.1.12
 
+  # DropDown Menu ( Role Selection )
+  dropdown_button2: ^2.3.8
+
 
 dev_dependencies:
   flutter_test:
