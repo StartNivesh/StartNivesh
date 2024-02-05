@@ -5,6 +5,7 @@ import 'package:start_nivesh/Splash_Screen.dart';
 import 'package:start_nivesh/pages/On_Boarding_Screen.dart';
 
 
+
 import 'HomeScreen.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
+      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
 
