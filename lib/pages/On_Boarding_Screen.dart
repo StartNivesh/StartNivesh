@@ -25,8 +25,8 @@ class OnBoarding extends StatelessWidget {
       title: 'Discover Investments',
       body: 'Learn about various investment options and strategies.',
       image: Center(
-        child: Image.asset(
-          'assets/investment.png',
+        child: Image.network(
+          'https://drive.google.com/file/d/1IOFRw3IJGrJPUgckhlEmmBZ2Y6EKApEJ/view?usp=drive_link',
           height: 250,
         ),
       ),
