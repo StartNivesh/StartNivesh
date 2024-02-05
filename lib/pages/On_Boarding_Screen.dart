@@ -7,15 +7,12 @@ class OnBoarding extends StatelessWidget {
 
   final List<PageViewModel> pages = [
     PageViewModel(
-      title: 'First Page',
-      body: 'Description',
-      footer: ElevatedButton(
-        onPressed: () {},
-        child: const Text("Let's go"),
-      ),
+      title: 'Welcome to Start Nivesh',
+      body: 'Explore a world of financial opportunities with Start Nivesh.',
       image: Center(
-        child: Image.network(
-            'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+        child: Image.asset('assets/START.png',
+          height: 260,
+        ),
       ),
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -25,16 +22,13 @@ class OnBoarding extends StatelessWidget {
       ),
     ),
     PageViewModel(
-      title: 'Second Page',
-      body: 'Description',
-      footer: ElevatedButton(
-        onPressed: () {},
-        child: const Text("Let's go"),
-      ),
-
+      title: 'Discover Investments',
+      body: 'Learn about various investment options and strategies.',
       image: Center(
-        child: Image.network(
-            'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+        child: Image.asset(
+          'assets/investment.png',
+          height: 250,
+        ),
       ),
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -44,15 +38,13 @@ class OnBoarding extends StatelessWidget {
       ),
     ),
     PageViewModel(
-      title: 'Third Page',
-      body: 'Description',
-      footer: ElevatedButton(
-        onPressed: () {},
-        child: const Text("Let's go"),
-      ),
+      title: 'Plan Your Financial Future',
+      body: 'Take control of your financial future with Start Nivesh.',
       image: Center(
-        child: Image.network(
-            'https://images.pexels.com/photos/267389/pexels-photo-267389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+        child: Image.asset(
+          'assets/line-graph.png',
+          height: 250,
+        ),
       ),
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -67,7 +59,8 @@ class OnBoarding extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('On Boarding'),
+        title: const Text('  '),
+
         centerTitle: true,
       ),
       body: IntroductionScreen(
@@ -79,9 +72,9 @@ class OnBoarding extends StatelessWidget {
           activeColor: Colors.lightBlue,
         ),
         showDoneButton: true,
-        done: const Text("Done", style: TextStyle(fontSize: 20),),
+        done: const Text("Get Started", style: TextStyle(fontSize: 15),),
         showSkipButton: true,
-        skip: const Text('Skip', style: TextStyle(fontSize: 20)),
+        skip: const Text('Skip', style: TextStyle(fontSize: 16)),
         showNextButton: true,
         next: const Icon(Icons.arrow_forward, size: 20),
         onDone: () => onDone(context),
@@ -91,6 +84,8 @@ class OnBoarding extends StatelessWidget {
 
   void onDone(BuildContext context) {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+      context,
+      MaterialPageRoute(builder: (context) => const HomeScreen()),
+    );
   }
 }
