@@ -15,7 +15,7 @@ class OnBoarding extends StatelessWidget {
       ),
       image: Center(
         child: Image.network(
-            'https://images.pexels.com/photos/20069294/pexels-photo-20069294/free-photo-of-window-with-lace-curtains-and-flowers-on-the-wall.jpeg'),
+            'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
       ),
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -34,7 +34,7 @@ class OnBoarding extends StatelessWidget {
 
       image: Center(
         child: Image.network(
-            'https://images.pexels.com/photos/18099926/pexels-photo-18099926/free-photo-of-woman-in-tied-crop-top-crouching-on-white-spot.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+            'https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
       ),
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
@@ -52,7 +52,7 @@ class OnBoarding extends StatelessWidget {
       ),
       image: Center(
         child: Image.network(
-            'https://images.pexels.com/photos/20087121/pexels-photo-20087121/free-photo-of-a-woman-in-a-black-dress-sitting-on-a-chair.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+            'https://images.pexels.com/photos/267389/pexels-photo-267389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
       ),
       decoration: const PageDecoration(
         titleTextStyle: TextStyle(
