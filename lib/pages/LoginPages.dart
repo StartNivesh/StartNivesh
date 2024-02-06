@@ -1,6 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class LoginPage extends StatelessWidget {
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
+
+  Future<void> _handleGoogleSignIn(BuildContext context) async {
+    try {
+      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      if (googleUser != null) {
+        print('Google sign-in successful: ${googleUser.displayName}');
+        // Navigate to the next screen or perform other actions upon successful sign-in
+      } else {
+        print('Google sign-in canceled');
+      }
+    } catch (error) {
+      print('Google sign-in failed: $error');
+    }
+  }
+
+  Future<void> _handleAppleSignIn(BuildContext context) async {
+    try {
+      final credential = await SignInWithApple.getAppleIDCredential(
+        scopes: [AppleIDAuthorizationScopes.email, AppleIDAuthorizationScopes.fullName],
+      );
+      print('Apple sign-in successful: $credential');
+      // Navigate to the next screen or perform other actions upon successful sign-in
+    } catch (error) {
+      print('Apple sign-in failed: $error');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,11 +40,10 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Logo Image
               Image.asset(
-                'assets/START.png', // Replace with the path to your logo image
-                height: 200,
-                width: 200,
+                'assets/START.png',
+                height: 150,
+                width: 150,
               ),
               SizedBox(height: 20),
               Text(
@@ -27,7 +56,7 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
-                  labelText: 'Username',
+                  labelText: 'Username or Email id',
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -47,6 +76,75 @@ class LoginPage extends StatelessWidget {
                   print('Login button pressed');
                 },
                 child: Text('Login'),
+              ),
+              SizedBox(height: 20),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton.icon(
+                          onPressed: () => _handleGoogleSignIn(context),
+                          icon: Image.asset(
+                            'assets/google_logo.png',
+                            height: 24,
+                            width: 18,
+                          ),
+                          label: Text('Sign in with Google'),
+                        ),
+                        SizedBox(width: 10),
+                        ElevatedButton.icon(
+                          onPressed: () => _handleAppleSignIn(context),
+                          icon: Image.asset(
+                            'assets/apple_logo.png',
+                            height: 24,
+                            width: 18,
+                          ),
+                          label: Text('Sign in with Apple'),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          height: 8,
+                        )
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+
+                        ElevatedButton.icon(
+                          onPressed: () => _handleAppleSignIn(context),
+                          icon: Image.asset(
+                            'assets/threads.png',
+                            height: 24,
+                            width: 18,
+                          ),
+                          label: Text('Sign in with Threads'),
+                        ),
+                        SizedBox(width: 10),
+                        ElevatedButton.icon(
+                          onPressed: () => _handleGoogleSignIn(context),
+                          icon: Image.asset(
+                            'assets/x_logo.png',
+                            height: 24,
+                            width: 18,
+                          ),
+                          label: Text('Sign in with x      '),
+                        ),
+
+                      ],
+                    ),
+
+
+
+
+                  ],
+                ),
               ),
             ],
           ),
