@@ -13,8 +13,8 @@ class LoginPage extends StatelessWidget {
               // Logo Image
               Image.asset(
                 'assets/START.png', // Replace with the path to your logo image
-                height: 80,
-                width: 80,
+                height: 200,
+                width: 200,
               ),
               SizedBox(height: 20),
               Text(
