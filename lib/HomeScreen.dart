@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:start_nivesh/pages/StartupScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key});
@@ -9,6 +10,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
+  final List<Widget> _screens = [
+    HomeScreen(),
+    StartupScreen(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +63,6 @@ class _HomeScreenState extends State<HomeScreen> {
           IconButton(
             icon: Icon(Icons.notifications),
             onPressed: () {
-              // Handle notification icon tap
             },
           ),
           IconButton(
@@ -327,7 +331,14 @@ class _HomeScreenState extends State<HomeScreen> {
         onTap: (index) {
           setState(() {
             _currentIndex = index;
+
           });
+      // Navigate to the selected screen based on t
+
+
+
+
+
         },
         backgroundColor: Colors.blue,
         selectedItemColor: Colors.black,
@@ -351,7 +362,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+
     );
+
   }
 }
 
