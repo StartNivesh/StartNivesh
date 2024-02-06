@@ -445,9 +445,3 @@ class _BlogScreenState extends State<BlogScreen> {
     );
   }
 }
-
-void main() {
-  runApp(MaterialApp(
-    home: BlogScreen(),
-  ));
-}
