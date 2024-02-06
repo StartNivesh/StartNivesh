@@ -5,6 +5,8 @@ import 'package:start_nivesh/RoleSelection.dart';
 import 'package:start_nivesh/Splash_Screen.dart';
 import 'package:start_nivesh/pages/LoginScreen.dart';
 import 'package:start_nivesh/pages/On_Boarding_Screen.dart';
+import 'package:start_nivesh/pages/StartupScreen.dart';
+
 
 
 
