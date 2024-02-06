@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key});
+class BlogScreen extends StatefulWidget {
+  const BlogScreen({Key? key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<BlogScreen> createState() => _BlogScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _BlogScreenState extends State<BlogScreen> {
   int _currentIndex = 0;
 
   @override
@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 "StartNivesh",
                 style: TextStyle(fontSize: 18),
               ),
-
+              arrowColor: Color(0xFF161A25),
               decoration: BoxDecoration(
                 color: Color(0xFF161A25),
               ),
@@ -81,7 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
           // Attractive Blog Card
           Card(
             elevation: 4,
-            margin: EdgeInsets.only(bottom: 16),
+            margin: EdgeInsets.only(bottom: 16,top: 16),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.all(16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -125,107 +125,51 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          // Startups Row
-          Row(
-            children: [
-              // Startup Card 1
-              Expanded(
-                child: Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16,top: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: 150,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  child: InkWell(
-                    onTap: () {
-                      // Handle startup item tap
-                    },
+                  Padding(
+                    padding: EdgeInsets.all(16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                          child: Image.network(
-                            "https://via.placeholder.com/150",
-                            height: 100,
-                            width: double.infinity,
-                            fit: BoxFit.cover,
+                        Text(
+                          "Blog Title",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.all(12),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Startup Name 1",
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: 4),
-                              Text(
-                                "Category | Location",
-                                style: TextStyle(color: Colors.grey, fontSize: 12),
-                              ),
-                            ],
-                          ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Author Name | Date",
+                          style: TextStyle(color: Colors.grey),
                         ),
                       ],
                     ),
                   ),
-                ),
+                ],
               ),
-              SizedBox(width: 16),
-              // Startup Card 2
-              Expanded(
-                child: Card(
-                  elevation: 4,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: InkWell(
-                    onTap: () {
-                      // Handle startup item tap
-                    },
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                          child: Image.network(
-                            "https://via.placeholder.com/150",
-                            height: 100,
-                            width: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(12),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "Startup Name 2",
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              SizedBox(height: 4),
-                              Text(
-                                "Category | Location",
-                                style: TextStyle(color: Colors.grey, fontSize: 12),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
           Card(
             elevation: 4,
@@ -319,8 +263,155 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          // Attractive Startup
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16,top: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: 150,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Blog Title",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Author Name | Date",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16,top: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: 150,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Blog Title",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Author Name | Date",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16,top: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: 150,
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Blog Title",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Author Name | Date",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+
+
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Handle add blog button tap
+        },
+        backgroundColor: Color(0xFF161A25),
+        child: Icon(Icons.add, color: Colors.white),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -355,6 +446,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-
-
-
+void main() {
+  runApp(MaterialApp(
+    home: BlogScreen(),
+  ));
+}
