@@ -31,8 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  google_sign_in: ^5.0.4
-  sign_in_with_apple: ^3.0.0
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -47,6 +46,12 @@ dependencies:
 
   # DropDown Menu ( Role Selection )
   dropdown_button2: ^2.3.8
+
+  # Google SignIn
+  google_sign_in: ^6.2.1
+
+  #Apple SignIn
+  sign_in_with_apple: ^5.0.0
 
 
 dev_dependencies:

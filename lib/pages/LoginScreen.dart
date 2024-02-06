@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
@@ -40,10 +42,13 @@ class LoginPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/START.png',
-                height: 150,
-                width: 150,
+              Hero(
+                tag: 'logo',
+                child: Image.asset(
+                  'assets/START.png',
+                  height: 150,
+                  width: 150,
+                ),
               ),
               SizedBox(height: 20),
               Text(
@@ -57,7 +62,9 @@ class LoginPage extends StatelessWidget {
               TextField(
                 decoration: InputDecoration(
                   labelText: 'Username or Email id',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
                 ),
               ),
               SizedBox(height: 10),
@@ -65,7 +72,9 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Password',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
                 ),
               ),
               SizedBox(height: 20),
@@ -82,7 +91,7 @@ class LoginPage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Column(
                   children: [
-                    Row(
+                    Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ElevatedButton.icon(
@@ -106,42 +115,6 @@ class LoginPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Row(
-                      children: [
-                        Container(
-                          height: 8,
-                        )
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-
-                        ElevatedButton.icon(
-                          onPressed: () => _handleAppleSignIn(context),
-                          icon: Image.asset(
-                            'assets/threads.png',
-                            height: 24,
-                            width: 18,
-                          ),
-                          label: Text('Sign in with Threads'),
-                        ),
-                        SizedBox(width: 10),
-                        ElevatedButton.icon(
-                          onPressed: () => _handleGoogleSignIn(context),
-                          icon: Image.asset(
-                            'assets/x_logo.png',
-                            height: 24,
-                            width: 18,
-                          ),
-                          label: Text('Sign in with x      '),
-                        ),
-
-                      ],
-                    ),
-
-
-
 
                   ],
                 ),
