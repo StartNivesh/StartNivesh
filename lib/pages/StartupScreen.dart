@@ -96,8 +96,8 @@ class _StartupScreenState extends State<StartupScreen> {
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
                     child: Image.network(
                       "https://via.placeholder.com/300",
-                      height: 150,
-                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height*0.3,
+                      width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -115,7 +115,7 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "Founder Name |",
+                          "Founder Name | Caption",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -125,6 +125,331 @@ class _StartupScreenState extends State<StartupScreen> {
               ),
             ),
           ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: MediaQuery.of(context).size.height*0.3,
+                      width: MediaQuery.of(context).size.width*2.3,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "StartUp Name",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Founder Name | Caption",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: MediaQuery.of(context).size.height*0.3,
+                      width: MediaQuery.of(context).size.width*2.3,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "StartUp Name",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Founder Name | Caption",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: MediaQuery.of(context).size.height*0.3,
+                      width: MediaQuery.of(context).size.width*2.3,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "StartUp Name",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Founder Name | Caption",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: MediaQuery.of(context).size.height*0.3,
+                      width: MediaQuery.of(context).size.width*2.3,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "StartUp Name",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Founder Name | Caption",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: MediaQuery.of(context).size.height*0.3,
+                      width: MediaQuery.of(context).size.width*2.3,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "StartUp Name",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Founder Name | Caption",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: MediaQuery.of(context).size.height*0.3,
+                      width: MediaQuery.of(context).size.width*2.3,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "StartUp Name",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Founder Name | Caption",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            elevation: 4,
+            margin: EdgeInsets.only(bottom: 16),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            child: InkWell(
+              onTap: () {
+                // Handle blog item tap
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+                    child: Image.network(
+                      "https://via.placeholder.com/300",
+                      height: MediaQuery.of(context).size.height*0.3,
+                      width: MediaQuery.of(context).size.width*2.3,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "StartUp Name",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          "Founder Name | Caption",
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+
+
           // Attractive Startup
         ],
       ),
