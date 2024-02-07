@@ -94,7 +94,7 @@ class OnBoarding extends StatelessWidget {
   void onDone(BuildContext context) {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const HomeScreen()),
+      MaterialPageRoute(builder: (context) => HomeScreen()),
     );
   }
 }

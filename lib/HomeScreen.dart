@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:start_nivesh/pages/BlogScreen.dart';
 import 'package:start_nivesh/pages/StartupScreen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,6 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = [
     HomeScreen(),
     StartupScreen(),
+    BlogScreen()
   ];
 
   @override
@@ -326,48 +328,213 @@ class _HomeScreenState extends State<HomeScreen> {
           // Attractive Startup
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-
-          });
-      // Navigate to the selected screen based on t
-
-
-
-
-
-        },
-        backgroundColor: Colors.blue,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.rocket),
-            label: 'Startup',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.article),
-            label: 'Blog',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   currentIndex: _currentIndex,
+      //   onTap: (index) {
+      //     setState(() {
+      //       _currentIndex = index;
+      //
+      //     });
+      // // Navigate to the selected screen based on t
+      //
+      //
+      //
+      //
+      //
+      //   },
+      //   backgroundColor: Colors.blue,
+      //   selectedItemColor: Colors.black,
+      //   unselectedItemColor: Colors.grey,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home),
+      //       label: 'Home',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.rocket),
+      //       label: 'Startup',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.article),
+      //       label: 'Blog',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person),
+      //       label: 'Profile',
+      //     ),
+      //   ],
+      // ),
 
     );
 
   }
 }
 
+
+
+
+
+
+void main() => runApp(const BottomNavigationBarExampleApp());
+
+class BottomNavigationBarExampleApp extends StatelessWidget {
+  const BottomNavigationBarExampleApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: BottomNavigationBarExample(),
+    );
+  }
+}
+
+class BottomNavigationBarExample extends StatefulWidget {
+  const BottomNavigationBarExample({Key? key}) : super(key: key);
+
+  @override
+  State<BottomNavigationBarExample> createState() =>
+      _BottomNavigationBarExampleState();
+}
+
+class _BottomNavigationBarExampleState
+    extends State<BottomNavigationBarExample> {
+  int _selectedIndex = 0;
+
+  static const List<Widget> _screens = <Widget>[
+    HomeScreen(),
+    StartupScreen(),
+    BlogScreen(),
+
+
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _screens,
+      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //
+      //   items: const <BottomNavigationBarItem>[
+      //     BottomNavigationBarItem(
+      //
+      //       icon: Icon(Icons.home,color: Colors.black,),
+      //       label: 'Home',
+      //
+      //
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.rocket,color: Colors.black,),
+      //       label: 'Startup',
+      //
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.article,color: Colors.black),
+      //       label: 'Blog',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person,color: Colors.black),
+      //       label: 'Profile',
+      //     ),
+      //   ],
+      //   currentIndex: _selectedIndex,
+      //   selectedItemColor: Colors.black,
+      //   onTap: _onItemTapped,
+      // ),
+      //   bottomNavigationBar: BottomNavigationBar(
+      //     backgroundColor: Colors.white,
+      //     elevation: 10,
+      //     selectedFontSize: 14,
+      //     unselectedFontSize: 12,
+      //     selectedItemColor: Colors.black,
+      //     unselectedItemColor: Colors.grey,
+      //     type: BottomNavigationBarType.fixed,
+      //     currentIndex: _selectedIndex,
+      //     onTap: _onItemTapped,
+      //     items: <BottomNavigationBarItem>[
+      //       BottomNavigationBarItem(
+      //         icon: Icon(Icons.home),
+      //         label: 'Home',
+      //       ),
+      //       BottomNavigationBarItem(
+      //         icon: Icon(Icons.rocket),
+      //         label: 'Startup',
+      //       ),
+      //       BottomNavigationBarItem(
+      //         icon: Icon(Icons.article),
+      //         label: 'Blog',
+      //       ),
+      //       BottomNavigationBarItem(
+      //         icon: Icon(Icons.person),
+      //         label: 'Profile',
+      //       ),
+      //     ],
+      //   )
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        notchMargin: 8.0,
+        color: Colors.transparent,
+        elevation: 0,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(26),bottom:Radius.circular(26) ),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                blurRadius: 6,
+                offset: Offset(0, -3),
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.home, size: 28),
+                onPressed: () => _onItemTapped(0),
+                color: _selectedIndex == 0 ? Colors.lightBlue : Colors.grey,
+              ),
+              IconButton(
+                icon: Icon(Icons.rocket, size: 28),
+                onPressed: () => _onItemTapped(1),
+                color: _selectedIndex == 1 ? Colors.lightBlue : Colors.grey,
+              ),
+              SizedBox(width: 64), // Adds space in the middle for the FAB
+              IconButton(
+                icon: Icon(Icons.article, size: 28),
+                onPressed: () => _onItemTapped(2),
+                color: _selectedIndex == 2 ? Colors.lightBlue : Colors.grey,
+              ),
+              IconButton(
+                icon: Icon(Icons.person, size: 28),
+                onPressed: () => _onItemTapped(3),
+                color: _selectedIndex == 3 ? Colors.lightBlue : Colors.grey,
+              ),
+            ],
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Colors.lightBlue,
+        child: Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
+
+    );
+  }
+}
 
 
 
