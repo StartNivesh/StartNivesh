@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
 import 'package:start_nivesh/pages/StartupScreen.dart';
 
@@ -14,7 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> _screens = [
     HomeScreen(),
     StartupScreen(),
-    BlogScreen()
+    BlogScreen(),
+    ProfileScreen()
   ];
 
   @override
@@ -405,6 +407,8 @@ class _BottomNavigationBarExampleState
     HomeScreen(),
     StartupScreen(),
     BlogScreen(),
+    ProfileScreen(),
+
 
 
   ];
@@ -479,6 +483,7 @@ class _BottomNavigationBarExampleState
       //       ),
       //     ],
       //   )
+
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
         notchMargin: 8.0,

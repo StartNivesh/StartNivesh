@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
   Future<void> _handleGoogleSignIn(BuildContext context) async {
     // Implement Google Sign-In logic here
   }
@@ -11,6 +11,9 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
