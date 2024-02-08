@@ -406,13 +406,6 @@ class _BlogScreenState extends State<BlogScreen> {
 
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Handle add blog button tap
-        },
-        backgroundColor: Color(0xFF161A25),
-        child: Icon(Icons.add, color: Colors.white),
-      ),
     );
   }
 }
