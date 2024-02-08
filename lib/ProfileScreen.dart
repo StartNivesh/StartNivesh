@@ -73,8 +73,8 @@ class ProfileScreen extends StatelessWidget {
         padding: const EdgeInsets.all(10),
         children: [
           // COLUMN THAT WILL CONTAIN THE PROFILE
-          Column(
-            children: const [
+          const Column(
+            children: [
               CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
@@ -83,7 +83,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               SizedBox(height: 10),
               Text(
-                "Rachael Wagner",
+                "Admin One",
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -93,8 +93,8 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 25),
-          Row(
-            children: const [
+          const Row(
+            children: [
               Padding(
                 padding: EdgeInsets.only(right: 5),
                 child: Text(
