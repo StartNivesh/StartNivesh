@@ -62,7 +62,6 @@ class OnBoarding extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('  '),
-
         centerTitle: true,
       ),
       body: IntroductionScreen(
@@ -94,7 +93,7 @@ class OnBoarding extends StatelessWidget {
   void onDone(BuildContext context) {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => HomeScreen()),
+      MaterialPageRoute(builder: (context) => BottomNavigationBarExample()),
     );
   }
 }

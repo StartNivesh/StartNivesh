@@ -65,6 +65,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+  dark_light_button:
+    dependency: "direct main"
+    description:
+      name: dark_light_button
+      sha256: "46b6685e30415a54f13066f7572297d602f3ab687431e57f77653af24caad1e4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   dots_indicator:
     dependency: transitive
     description:
@@ -349,6 +357,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
+  sprung:
+    dependency: transitive
+    description:
+      name: sprung
+      sha256: "54322638f5e393d2b808175f7eadbaa4836a4425456e98d93c3d676dc56ebdf1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
   stack_trace:
     dependency: transitive
     description:

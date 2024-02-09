@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:start_nivesh/RoleSelection.dart';
+import 'package:start_nivesh/pages/On_Boarding_Screen.dart';
 import 'HomeScreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,7 +17,7 @@ class SplashScreenState extends State<SplashScreen> {
     Timer(
       Duration(seconds: 7),
           () => Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => HomeScreen())
+          context, MaterialPageRoute(builder: (context) => OnBoarding())
       ),
     );
   }
