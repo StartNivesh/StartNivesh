@@ -1120,14 +1120,14 @@ class _BottomNavigationBarExampleState
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
-        notchMargin: 8.0,
-        color: Colors.transparent,
+        notchMargin: 4.0,
+        color: Colors.lightBlue,
         elevation: 0,
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.vertical(
-              top: Radius.circular(26),
-              bottom: Radius.circular(26),
+              top: Radius.circular(20),
+              bottom: Radius.circular(20),
             ),
             color: Colors.white,
             boxShadow: [
