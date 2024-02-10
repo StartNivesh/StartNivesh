@@ -628,6 +628,7 @@ import 'package:start_nivesh/pages/DescriptionPage.dart';
 import 'package:start_nivesh/pages/LoginScreen.dart';
 import 'package:start_nivesh/pages/Notification.dart';
 import 'package:flutter/material.dart';
+import 'package:start_nivesh/pages/SearchPage.dart';
 import 'package:start_nivesh/pages/Setting.dart';
 import 'package:start_nivesh/pages/StartupScreen.dart';
 
@@ -676,6 +677,7 @@ class HomeScreen extends StatelessWidget {
             ),
             onPressed: () {
               // Handle search icon tap
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
             },
           ),
           IconButton(
