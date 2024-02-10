@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:start_nivesh/HomeScreen.dart';
+import 'package:start_nivesh/pages/LoginScreen.dart';
 
 void main() {
   runApp(const RoleSelection());
@@ -109,7 +110,7 @@ class _RoleSelectionState extends State<RoleSelection> {
                         _formKey.currentState!.save();
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(builder: (context) =>  BottomNavigationBarExample()),
+                          MaterialPageRoute(builder: (context) =>  LoginScreen()),
                         );
                       }
                     },

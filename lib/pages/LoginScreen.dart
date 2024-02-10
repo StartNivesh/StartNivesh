@@ -11,23 +11,10 @@ class LoginScreen extends StatelessWidget {
 
   Future<void> _handleGoogleSignIn(BuildContext context) async {
 
-    try {
-      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-      if (googleUser != null) {
-        // Authentication successful, handle the user login here
-
-        // Navigate to the home screen
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const HomeScreen()),
-        ); // Replace '/home' with your home screen route
-      } else {
-        // User canceled the sign-in process
-      }
-    } catch (error) {
-      print('Google sign-in error: $error');
-      // Handle sign-in errors
-    }
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const BottomNavigationBarExample()),
+    ); // Replace '/home' with your home screen route
   }
 
   Future<void> _handleAppleSignIn(BuildContext context) async {
@@ -123,7 +110,10 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Perform login logic here
+
+                      // Implement Forgot Password logic
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigationBarExample()));
+
 
                     //if the user has not entered either email or password
                     Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
@@ -133,7 +123,8 @@ class LoginScreen extends StatelessWidget {
                     // For simplicity, let's just print a message for now
                     print('Login button pressed');
                   },
-                  style: ElevatedButton.styleFrom(
+                  style: TextButton.styleFrom(
+
                     padding: EdgeInsets.symmetric(vertical: 16), backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
