@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: NotificationPage(),
+      home: BottomNavigationBarExample(),
       debugShowCheckedModeBanner: false,
     );
   }
