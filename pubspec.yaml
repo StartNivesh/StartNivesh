@@ -101,6 +101,7 @@ flutter:
   assets:
     - assets/START.png
     - assets/
+    - assets/Zepto_logo.png
 
 
   #   - images/a_dot_burr.jpeg
