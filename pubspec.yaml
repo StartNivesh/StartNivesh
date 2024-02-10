@@ -58,10 +58,14 @@ dependencies:
   # Dark Mode Button
   dark_light_button: ^0.0.2
 
+  # Firebase core
   firebase_core: ^2.25.4
 
+  # Firebase auth
   firebase_auth: ^4.17.4
 
+  # Trend Banner
+  banner_image: ^1.0.7
 
 
 dev_dependencies:

@@ -649,33 +649,44 @@ class HomeScreen extends StatelessWidget {
             color: Color(0xFF161A25),
             fontSize: 24,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Roboto', // Custom font family
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blue.shade300, // Solid background color
         centerTitle: true,
-        elevation: 0.0,
+        elevation: 0.0, // No shadow
         actions: [
           IconButton(
-            icon: Icon(Icons.notifications),
+            icon: Icon(
+              Icons.notifications,
+              color: Colors.white, // Change icon color
+            ),
             onPressed: () {
               // Handle notification icon tap
             },
           ),
           IconButton(
-            icon: Icon(Icons.search),
+            icon: Icon(
+              Icons.search,
+              color: Colors.white, // Change icon color
+            ),
             onPressed: () {
               // Handle search icon tap
             },
           ),
           IconButton(
-            icon: Icon(Icons.chat),
+            icon: Icon(
+              Icons.chat,
+              color: Colors.white, // Change icon color
+            ),
             onPressed: () {
               // Handle chat icon tap
             },
           ),
         ],
       ),
-      body: ListView(
+
+        body: ListView(
         padding: EdgeInsets.all(16),
         children: [
         // Attractive Blog Card

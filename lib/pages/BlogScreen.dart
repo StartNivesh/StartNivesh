@@ -51,7 +51,8 @@ class _BlogScreenState extends State<BlogScreen> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.lightBlue.shade300,
+
         centerTitle: true,
         elevation: 0.0,
         actions: [

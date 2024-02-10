@@ -38,6 +38,7 @@ class ProfileScreen extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
+
         title: Text(
           "Start Nivesh",
           style: TextStyle(
@@ -46,7 +47,7 @@ class ProfileScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blue.shade300, // Solid background color
         centerTitle: true,
         elevation: 0.0,
         actions: [
