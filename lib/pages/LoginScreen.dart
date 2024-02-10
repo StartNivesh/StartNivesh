@@ -116,7 +116,7 @@ class LoginScreen extends StatelessWidget {
 
 
                     //if the user has not entered either email or password
-                    emptyLogin(emailcontroller.text.toString(),passwordcontroller.text.toString());
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
 
 
 
