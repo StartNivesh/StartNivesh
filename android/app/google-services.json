@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163770713733",
+    "project_id": "startnivesh-bfab1",
+    "storage_bucket": "startnivesh-bfab1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163770713733:android:5b2d00e7b8379f454f0bec",
+        "android_client_info": {
+          "package_name": "com.example.start_nivesh"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCp3IlT8PW4rpktYQtlCX9D0Zc3xgb6Js"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -58,6 +58,10 @@ dependencies:
   # Dark Mode Button
   dark_light_button: ^0.0.2
 
+  firebase_core: ^2.25.4
+
+  firebase_auth: ^4.17.4
+
 
 
 dev_dependencies:
