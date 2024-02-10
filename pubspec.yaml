@@ -67,6 +67,9 @@ dependencies:
   # Trend Banner
   banner_image: ^1.0.7
 
+  # Settings
+  babstrap_settings_screen : ^0.1.6
+
 
 dev_dependencies:
   flutter_test:
