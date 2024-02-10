@@ -627,7 +627,6 @@ import 'package:flutter/material.dart';
 import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
 import 'package:start_nivesh/pages/StartupScreen.dart';
-import 'package:dark_light_button/dark_light_button.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -643,6 +642,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent, // Solid background color
+
         title: Text(
           "Start Nivesh",
           style: TextStyle(
@@ -652,14 +653,13 @@ class HomeScreen extends StatelessWidget {
             fontFamily: 'Roboto', // Custom font family
           ),
         ),
-        backgroundColor: Colors.blue.shade300, // Solid background color
         centerTitle: true,
         elevation: 0.0, // No shadow
         actions: [
           IconButton(
             icon: Icon(
               Icons.notifications,
-              color: Colors.white, // Change icon color
+              color: Colors.black, // Change icon color
             ),
             onPressed: () {
               // Handle notification icon tap
@@ -668,7 +668,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.search,
-              color: Colors.white, // Change icon color
+              color: Colors.black, // Change icon color
             ),
             onPressed: () {
               // Handle search icon tap
@@ -677,7 +677,7 @@ class HomeScreen extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.chat,
-              color: Colors.white, // Change icon color
+              color: Colors.black, // Change icon color
             ),
             onPressed: () {
               // Handle chat icon tap
