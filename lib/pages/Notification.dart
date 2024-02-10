@@ -35,7 +35,7 @@ class NotificationPage extends StatelessWidget {
               ),
               child: ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.teal,
                   child: Icon(
                     Icons.notifications,
                     color: Colors.white,
