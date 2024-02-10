@@ -14,7 +14,7 @@ class SettingsPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () {
-            Navigator.push(context,MaterialPageRoute(builder: (context)=>BottomNavigationBarExample()));
+            Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>BottomNavigationBarExample()));
           },
         ),
       ),
