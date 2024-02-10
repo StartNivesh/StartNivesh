@@ -37,14 +37,18 @@ class BusinessDescriptionPage extends StatelessWidget {
               duration: Duration(seconds: 1),
               curve: Curves.easeInOut,
               height: 200.0,
+
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
                 color: Colors.grey[300], // Placeholder color
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10.0),
-                child: Image.network(
-                  'https://via.placeholder.com/400x200', // Replace with actual image URL
+                child: Image.asset(
+                  'assets/business.png',
+                  height: 500,
+                  width: 400,
+                  // Replace with actual image URL
                   fit: BoxFit.cover,
                 ),
               ),
