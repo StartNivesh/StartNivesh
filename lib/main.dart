@@ -6,6 +6,7 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/RoleSelection.dart';
 import 'package:start_nivesh/Splash_Screen.dart';
+import 'package:start_nivesh/pages/Authentication/PhoneAuth.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
 import 'package:start_nivesh/pages/LoginScreen.dart';
 import 'package:start_nivesh/pages/On_Boarding_Screen.dart';
@@ -20,10 +21,10 @@ Future <void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Platform.isAndroid?await Firebase.initializeApp(
     options: const FirebaseOptions(
-      apiKey: "AIzaSyBhcOup5ijlTUFg2bCYd19aOdvqmpbtUp0",
-      appId: "1:794401066985:android:122e3727d8b6d24ad2c578",
-      messagingSenderId: "794401066985",
-      projectId: "flutter-firebase-demo-ebefa",
+      apiKey: "AIzaSyCCp3IlT8PW4rpktYQtlCX9D0Zc3xgb6Js",
+      appId: "1:163770713733:android:5b2d00e7b8379f454f0bec",
+      messagingSenderId: "163770713733",
+      projectId: "startnivesh-bfab1",
     ),
   )
       :
@@ -35,12 +36,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SignupScreen(),
+      home: PhoneAuth(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
 
 //Firebase hogya
 
