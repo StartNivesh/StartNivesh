@@ -214,8 +214,8 @@ class _BlogScreenState extends State<BlogScreen> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                    child: Image.network(
-                      "https://via.placeholder.com/300",
+                    child: Image.asset(
+                      "assets/ev_car.jpg",
                       height: 150,
                       width: double.infinity,
                       fit: BoxFit.cover,
@@ -227,7 +227,7 @@ class _BlogScreenState extends State<BlogScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Blog Title",
+                          "PMV EaS-E",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,

@@ -706,7 +706,7 @@ class HomeScreen extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
                 child: Image.asset(
-                  "assets/img.png",
+                  "assets/rivian.png",
                   height: 150,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -726,7 +726,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      "RJ Scaringe | ",
+                      "RJ Scaringe | California",
                       style: TextStyle(color: Colors.grey),
                     ),
                   ],
@@ -755,8 +755,8 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                      child: Image.network(
-                        "https://via.placeholder.com/150",
+                      child: Image.asset(
+                        "assets/Hammer_logo.png",
                         height: 100,
                         width: double.infinity,
                         fit: BoxFit.cover,
@@ -768,7 +768,7 @@ class HomeScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Startup Name 1",
+                            "Hammer",
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -776,7 +776,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            "Category | Location",
+                            "Audio tech | Panipat",
                             style: TextStyle(color: Colors.grey, fontSize: 12),
                           ),
                         ],
@@ -804,8 +804,8 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                      child: Image.network(
-                        "https://via.placeholder.com/150",
+                      child: Image.asset(
+                        "assets/Licious_Logo.png",
                         height: 100,
                         width: double.infinity,
                         fit: BoxFit.cover,
@@ -817,7 +817,7 @@ class HomeScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Startup Name 2",
+                            "Licious",
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -825,7 +825,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            "Category | Location",
+                            "Food Tech | Bangalore",
                             style: TextStyle(color: Colors.grey, fontSize: 12),
                           ),
                         ],
@@ -853,8 +853,8 @@ class HomeScreen extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                child: Image.network(
-                  "https://via.placeholder.com/300",
+                child: Image.asset(
+                  "assets/goal_stack.png",
                   height: 150,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -866,7 +866,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Blog Title",
+                      "Investing in the future",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -874,7 +874,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      "Author Name | Date",
+                      "Author | Date",
                       style: TextStyle(color: Colors.grey),
                     ),
                   ],
@@ -899,8 +899,8 @@ class HomeScreen extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                child: Image.network(
-                  "https://via.placeholder.com/300",
+                child: Image.asset(
+                  "assets/smallsteps.png",
                   height: 150,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -912,7 +912,7 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Blog Title",
+                      "Importance of Small Steps",
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
