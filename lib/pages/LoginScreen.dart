@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:start_nivesh/HomeScreen.dart';
 import 'package:start_nivesh/pages/Authentication/ForgetPassword.dart';
+import 'package:start_nivesh/pages/Authentication/PhoneAuth.dart';
 import 'package:start_nivesh/pages/Authentication/UiHelper.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -145,6 +146,17 @@ class LoginScreen extends StatelessWidget {
                   },
                   child: Text(
                     'Forgot Password?',
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                ),
+                SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    // Implement Forgot Password logic
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>PhoneAuth()));
+                  },
+                  child: Text(
+                    'Sign-in With Phone Number',
                     style: TextStyle(color: Colors.blue),
                   ),
                 ),
