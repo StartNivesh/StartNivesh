@@ -118,6 +118,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:start_nivesh/HomeScreen.dart';
 
 class SignupScreen extends StatelessWidget {
 
@@ -230,8 +231,9 @@ class SignupScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     // Perform sign-up logic here
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
                     // For simplicity, let's just print a message for now
-                    print('Sign Up button pressed');
+
                   },
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.symmetric(vertical: 16), backgroundColor: Colors.blue,

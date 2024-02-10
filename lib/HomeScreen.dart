@@ -625,7 +625,9 @@
 import 'package:flutter/material.dart';
 import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
+import 'package:start_nivesh/pages/DescriptionPage.dart';
 import 'package:start_nivesh/pages/LoginScreen.dart';
+import 'package:start_nivesh/pages/Notification.dart';
 import 'package:start_nivesh/pages/StartupScreen.dart';
 
 void main() {
@@ -663,6 +665,7 @@ class HomeScreen extends StatelessWidget {
             ),
             onPressed: () {
               // Handle notification icon tap
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationPage()));
             },
           ),
           IconButton(
@@ -698,6 +701,7 @@ class HomeScreen extends StatelessWidget {
         ),
         child: InkWell(
           onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessDescriptionPage()));
             // Handle blog item tap
           },
           child: Column(
@@ -748,6 +752,7 @@ class HomeScreen extends StatelessWidget {
               ),
               child: InkWell(
                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessDescriptionPage()));
                   // Handle startup item tap
                 },
                 child: Column(
@@ -797,6 +802,7 @@ class HomeScreen extends StatelessWidget {
               ),
               child: InkWell(
                 onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessDescriptionPage()));
                   // Handle startup item tap
                 },
                 child: Column(
@@ -846,6 +852,7 @@ class HomeScreen extends StatelessWidget {
         ),
         child: InkWell(
           onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessDescriptionPage()));
             // Handle blog item tap
           },
           child: Column(
@@ -892,6 +899,7 @@ class HomeScreen extends StatelessWidget {
         ),
         child: InkWell(
           onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>BusinessDescriptionPage()));
             // Handle blog item tap
           },
           child: Column(
