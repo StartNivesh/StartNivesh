@@ -14,32 +14,151 @@ class _BlogScreenState extends State<BlogScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
-        child: Column(
-          children: [
-            const UserAccountsDrawerHeader(
-              accountName: Text(
-                "StartNivesh",
-                style: TextStyle(fontSize: 18),
-              ),
-              arrowColor: Color(0xFF161A25),
-              decoration: BoxDecoration(
+        child: Container(
+          color: Colors.white,
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              Container(
+                height: 200,
                 color: Color(0xFF161A25),
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(
+                            "https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg"),
+                        radius: 50,
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "StartNivesh",
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        "StartNivesh@gmail.com",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              accountEmail: Text("StartNivesh@gmail.com"),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg"),
+              ListTile(
+                leading: Icon(
+                  Icons.dashboard,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "Dashboard",
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Navigate to dashboard screen
+                },
               ),
-            ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text("Settings"),
-              onTap: () {
-                // Handle drawer item tap
-                Navigator.pop(context);
-              },
-            ),
-          ],
+              ListTile(
+                leading: Icon(
+                  Icons.account_circle,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "Profile",
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Navigate to profile screen
+                },
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.history,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "Transaction History",
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Navigate to transaction history screen
+                },
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.payment,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "Payment Methods",
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Navigate to payment methods screen
+                },
+              ),
+              Divider(
+                color: Colors.black,
+                thickness: 0.5,
+                height: 30,
+                indent: 20,
+                endIndent: 20,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.settings,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "Settings",
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Navigate to settings screen
+                },
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.help,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "Help & Feedback",
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Navigate to help & feedback screen
+                },
+              ),
+              Divider(
+                color: Colors.black,
+                thickness: 0.5,
+                height: 30,
+                indent: 20,
+                endIndent: 20,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.exit_to_app,
+                  color: Colors.black,
+                ),
+                title: Text(
+                  "Logout",
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  // Add logout logic here
+                },
+              ),
+            ],
+          ),
         ),
       ),
       appBar: AppBar(
@@ -52,6 +171,7 @@ class _BlogScreenState extends State<BlogScreen> {
           ),
         ),
         backgroundColor: Colors.transparent,
+
         centerTitle: true,
         elevation: 0.0,
         actions: [
