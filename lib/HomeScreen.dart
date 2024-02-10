@@ -626,6 +626,7 @@ import 'package:flutter/material.dart';
 import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
 import 'package:start_nivesh/pages/LoginScreen.dart';
+import 'package:start_nivesh/pages/Notification.dart';
 import 'package:start_nivesh/pages/StartupScreen.dart';
 
 void main() {
@@ -662,6 +663,7 @@ class HomeScreen extends StatelessWidget {
               color: Colors.black, // Change icon color
             ),
             onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationPage()));
               // Handle notification icon tap
             },
           ),
@@ -797,6 +799,7 @@ class HomeScreen extends StatelessWidget {
               ),
               child: InkWell(
                 onTap: () {
+
                   // Handle startup item tap
                 },
                 child: Column(
