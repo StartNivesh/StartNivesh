@@ -1,9 +1,14 @@
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:start_nivesh/HomeScreen.dart';
+import 'package:start_nivesh/pages/Authentication/ForgetPassword.dart';
+import 'package:start_nivesh/pages/Authentication/UiHelper.dart';
 
 class LoginScreen extends StatelessWidget {
+  BuildContext? get context => null;
+
   Future<void> _handleGoogleSignIn(BuildContext context) async {
 
     try {
@@ -28,6 +33,37 @@ class LoginScreen extends StatelessWidget {
   Future<void> _handleAppleSignIn(BuildContext context) async {
 
   }
+
+  TextEditingController emailcontroller = TextEditingController();
+  TextEditingController passwordcontroller = TextEditingController();
+
+  //if the email feild is empty
+  //form validation
+
+  emptyLogin(String email , String password) {
+    if (email.isEmpty) {
+      UiHelper.CustomAlertBox(context!, "Enter a valid email");
+    } else if (password.isEmpty) {
+      UiHelper.CustomAlertBox(context!, "Enter Password");
+    } else {
+      // Perform login logic here using email and password
+      // For simplicity, let's just print the email and password for now
+      print('Email: $email');
+      print('Password: $password');
+
+      // Reset text fields after successful login
+      emailcontroller.clear();
+      passwordcontroller.clear();
+
+      // Navigate to the home screen
+      Navigator.pushReplacement(
+        context!,
+        MaterialPageRoute(builder: (context) => HomeScreen()),
+      );
+    }
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +97,7 @@ class LoginScreen extends StatelessWidget {
                 TextFormField(
                   decoration: InputDecoration(
                     labelText: 'Username or Email',
-                    prefixIcon: Icon(Icons.person, color: Colors.grey),
+                    suffixIcon: Icon(Icons.person, color: Colors.grey),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -75,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
-                    prefixIcon: Icon(Icons.lock, color: Colors.grey),
+                    suffixIcon: Icon(Icons.lock, color: Colors.grey),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -88,6 +124,12 @@ class LoginScreen extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {
                     // Perform login logic here
+
+                    //if the user has not entered either email or password
+                    emptyLogin(emailcontroller.text.toString(),passwordcontroller.text.toString());
+
+
+
                     // For simplicity, let's just print a message for now
                     print('Login button pressed');
                   },
@@ -108,6 +150,7 @@ class LoginScreen extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // Implement Forgot Password logic
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
                   },
                   child: Text(
                     'Forgot Password?',
