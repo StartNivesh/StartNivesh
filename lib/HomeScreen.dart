@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
             ),
             onPressed: () {
               // Handle notification icon tap
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationPage()));
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NotificationPage()));
             },
           ),
           IconButton(
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
             ),
             onPressed: () {
               // Handle search icon tap
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchPage()));
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SearchPage()));
             },
           ),
           IconButton(
@@ -431,7 +431,7 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsPage()));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SettingsPage()));
                   // Navigate to settings screen
                 },
               ),
