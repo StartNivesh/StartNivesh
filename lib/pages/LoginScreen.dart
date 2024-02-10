@@ -142,7 +142,7 @@ class LoginScreen extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // Implement Forgot Password logic
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
                   },
                   child: Text(
                     'Forgot Password?',
@@ -153,7 +153,7 @@ class LoginScreen extends StatelessWidget {
                 TextButton(
                   onPressed: () {
                     // Implement Forgot Password logic
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>PhoneAuth()));
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>PhoneAuth()));
                   },
                   child: Text(
                     'Sign-in With Phone Number',

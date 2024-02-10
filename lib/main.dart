@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SearchPage(),
+      home: LoginScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
