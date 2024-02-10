@@ -622,10 +622,10 @@
 // }
 
 
-
 import 'package:flutter/material.dart';
 import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
+import 'package:start_nivesh/pages/LoginScreen.dart';
 import 'package:start_nivesh/pages/StartupScreen.dart';
 
 void main() {
@@ -1075,7 +1075,7 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>LoginScreen()));
                   // Add logout logic here
                 },
               ),

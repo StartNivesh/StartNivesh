@@ -116,12 +116,18 @@
 // }
 
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatelessWidget {
-  const SignupScreen({Key? key});
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
 
   @override
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
