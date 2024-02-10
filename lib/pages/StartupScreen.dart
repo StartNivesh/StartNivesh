@@ -352,8 +352,8 @@ class _StartupScreenState extends State<StartupScreen> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                    child: Image.network(
-                      "https://via.placeholder.com/300",
+                    child: Image.asset(
+                      "assets/img_2.png",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.cover,
