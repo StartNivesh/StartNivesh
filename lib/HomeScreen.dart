@@ -625,6 +625,7 @@
 import 'package:flutter/material.dart';
 import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
+import 'package:start_nivesh/pages/ChatPage.dart';
 import 'package:start_nivesh/pages/DescriptionPage.dart';
 import 'package:start_nivesh/pages/LoginScreen.dart';
 import 'package:start_nivesh/pages/Notification.dart';
@@ -683,6 +684,7 @@ class HomeScreen extends StatelessWidget {
               color: Colors.black, // Change icon color
             ),
             onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatScreen()));
               // Handle chat icon tap
             },
           ),

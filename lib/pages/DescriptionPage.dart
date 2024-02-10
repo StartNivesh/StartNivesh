@@ -8,7 +8,7 @@ class BusinessDescriptionPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Business Description'),
-        backgroundColor: Colors.teal, // Set app bar background color
+        backgroundColor: Colors.lightBlue.shade300, // Set app bar background color
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -27,7 +27,7 @@ class BusinessDescriptionPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.teal, // Set text color
+                color: Colors.lightBlue.shade300, // Set text color
                 fontFamily: 'Pacifico', // Set custom font family
               ),
             ),
@@ -95,14 +95,14 @@ class BusinessDescriptionPage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.teal,
+                          color: Colors.lightBlue.shade300,
                           fontFamily: 'Pacifico',
                         ),
                       ),
                       SizedBox(height: 10.0),
                       Row(
                         children: [
-                          Icon(Icons.location_on, color: Colors.teal),
+                          Icon(Icons.location_on, color: Colors.lightBlue.shade300),
                           SizedBox(width: 10.0),
                           Text(
                             '123 Main Street, City, Country',
@@ -113,7 +113,7 @@ class BusinessDescriptionPage extends StatelessWidget {
                       SizedBox(height: 10.0),
                       Row(
                         children: [
-                          Icon(Icons.phone, color: Colors.teal),
+                          Icon(Icons.phone, color: Colors.lightBlue.shade300),
                           SizedBox(width: 10.0),
                           Text(
                             '+1234567890',
@@ -142,7 +142,7 @@ class BusinessDescriptionPage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.teal,
+                          color: Colors.lightBlue,
                           fontFamily: 'Pacifico',
                         ),
                       ),
