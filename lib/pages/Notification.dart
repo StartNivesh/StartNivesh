@@ -48,7 +48,7 @@ class NotificationPage extends StatelessWidget {
                   ),
                 ),
                 subtitle: Text(
-                  'This is a notification message. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                  'You have a new connection request',
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
