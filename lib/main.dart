@@ -7,7 +7,6 @@ import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/RoleSelection.dart';
 import 'package:start_nivesh/Splash_Screen.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
-import 'package:start_nivesh/pages/DescriptionPage.dart';
 import 'package:start_nivesh/pages/LoginScreen.dart';
 import 'package:start_nivesh/pages/Notification.dart';
 import 'package:start_nivesh/pages/On_Boarding_Screen.dart';
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      home: BottomNavigationBarExample(),
       debugShowCheckedModeBanner: false,
     );
   }
