@@ -46,7 +46,7 @@ class LoginScreen extends StatelessWidget {
       // Navigate to the home screen
       Navigator.pushReplacement(
         context!,
-        MaterialPageRoute(builder: (context) => BottomNavigationBarExample()),
+        MaterialPageRoute(builder: (context) => HomeScreen()),
       );
     }
   }
@@ -113,11 +113,11 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () {
 
                       // Implement Forgot Password logic
-                      // Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigationBarExample()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigationBarExample()));
 
 
                     //if the user has not entered either email or password
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BottomNavigationBarExample()));
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
 
 
 

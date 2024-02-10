@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:start_nivesh/HomeScreen.dart';
 import 'package:start_nivesh/RoleSelection.dart';
+import 'package:start_nivesh/pages/LoginScreen.dart';
 
 class OnBoarding extends StatelessWidget {
   OnBoarding({super.key});
@@ -93,7 +94,7 @@ class OnBoarding extends StatelessWidget {
   void onDone(BuildContext context) {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => BottomNavigationBarExample()),
+      MaterialPageRoute(builder: (context) => LoginScreen()),
     );
   }
 }
