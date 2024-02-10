@@ -13,7 +13,7 @@ class SearchPage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.grey), // Add back arrow icon
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigationBarExample())); // Navigate back when the arrow is pressed
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BottomNavigationBarExample())); // Navigate back when the arrow is pressed
           },
         ),
         title: TextField(
@@ -21,26 +21,30 @@ class SearchPage extends StatelessWidget {
             hintText: 'Search',
             hintStyle: TextStyle(color: Colors.grey),
             prefixIcon: Icon(Icons.search, color: Colors.grey),
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.symmetric(vertical: 16),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20), // Adjust border radius here
+              borderSide: BorderSide.none,
+            ),
+            contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16), // Adjust padding as needed
             fillColor: Colors.grey.shade200,
             filled: true,
           ),
+          style: TextStyle(color: Colors.black), // Change text color here
         ),
       ),
       body: ListView(
         padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
         children: [
-          _buildSearchResultItem('Username1'),
-          _buildSearchResultItem('Username2'),
-          _buildSearchResultItem('Username3'),
-          _buildSearchResultItem('Username4'),
-          _buildSearchResultItem('Username5'),
-          _buildSearchResultItem('Username6'),
-          _buildSearchResultItem('Username7'),
-          _buildSearchResultItem('Username8'),
-          _buildSearchResultItem('Username9'),
-          _buildSearchResultItem('Username10'),
+          _buildSearchResultItem('Innovize Solutions'),
+          _buildSearchResultItem('GrowthGenius Ventures'),
+          _buildSearchResultItem('LaunchPad Innovations'),
+          _buildSearchResultItem('Prodigy Enterprises'),
+          _buildSearchResultItem('Nexus Innovations Co.'),
+          _buildSearchResultItem('Apex Ventures Group'),
+          _buildSearchResultItem('Catalyst Creations'),
+          _buildSearchResultItem('Visionary Ventures Inc.'),
+          _buildSearchResultItem('Momentum Labs'),
+          _buildSearchResultItem('Pinnacle Ventures Ltd.'),
         ],
       ),
     );
