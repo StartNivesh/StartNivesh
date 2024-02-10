@@ -215,7 +215,7 @@ class _StartupScreenState extends State<StartupScreen> {
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
                     child: Image.asset(
-                      "assets/WhatsApp Image 2024-02-10 at 15.34.53_471844f9.jpg",
+                      "assets/Slice_logo.jpg",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.cover,
@@ -235,7 +235,7 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "A FinTech Company",
+                          "Founder: Rajan Bajaj \nSlice is a digital lending platform that offers credit card in collaboration with several NBFCs",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -261,7 +261,7 @@ class _StartupScreenState extends State<StartupScreen> {
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
                     child: Image.asset(
-                      "assets/Zepto_logo.jpg",
+                      "assets/Snitch_logo.jpg",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.cover,
@@ -273,7 +273,7 @@ class _StartupScreenState extends State<StartupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "ZEPTO",
+                          "SNITCH",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -281,7 +281,7 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "Zepto is a quick commerce platform and e-grocery company",
+                          "Founder: Siddharth Dungarwal \nSnitch is a men's fast fashion brand that designs and sells clothing in response to current trends",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -306,7 +306,7 @@ class _StartupScreenState extends State<StartupScreen> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                    child: Image.network(
+                    child: Image.asset(
                       "assets/Skippy_logo.jpg",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
@@ -327,7 +327,7 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "",
+                          "Founder: Ravi and Anuja Kabra \nSkippi is an India Popsickle brand",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -352,8 +352,8 @@ class _StartupScreenState extends State<StartupScreen> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                    child: Image.network(
-                      "https://via.placeholder.com/300",
+                    child: Image.asset(
+                      "assets/Theka_Cofee_logo.png",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.cover,
@@ -365,7 +365,7 @@ class _StartupScreenState extends State<StartupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "StartUp Name",
+                          "Theka Coffee",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -373,7 +373,8 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "Founder Name | Caption",
+                          "Founder: Bhupinder Madaan \n"
+                              "Theka Coffee uses cold brews to make coffee.",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -398,8 +399,8 @@ class _StartupScreenState extends State<StartupScreen> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                    child: Image.network(
-                      "https://via.placeholder.com/300",
+                    child: Image.asset(
+                      "assets/Licious_Logo.png",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.fill,
@@ -411,7 +412,7 @@ class _StartupScreenState extends State<StartupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "StartUp Name",
+                          "LICIOUS",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -419,7 +420,7 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "Founder Name | Caption",
+                          "Founders: Vivek Gupta and Abhay Hanjura \n Licious aims to deliver the freshest meat and seafood to its customers' doorsteps",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -444,8 +445,8 @@ class _StartupScreenState extends State<StartupScreen> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                    child: Image.network(
-                      "https://via.placeholder.com/300",
+                    child: Image.asset(
+                      "assets/Revamp_logo.png",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.cover,
@@ -457,7 +458,7 @@ class _StartupScreenState extends State<StartupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "StartUp Name",
+                          "REVAMP MOTO",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -465,7 +466,7 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "Founder Name | Caption",
+                          "Founder: Jayesh Tope \nRevamp Moto is the country's first modular utility vehicle startup",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -490,8 +491,8 @@ class _StartupScreenState extends State<StartupScreen> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                    child: Image.network(
-                      "https://via.placeholder.com/300",
+                    child: Image.asset(
+                      "assets/CocoFit_logo.png",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.cover,
@@ -503,7 +504,7 @@ class _StartupScreenState extends State<StartupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "StartUp Name",
+                          "COCO FIT",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -511,7 +512,7 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "Founder Name | Caption",
+                          "Founder: Sasi Kanth Visinigiri \nCocofit Franchise is a great Coconut Shake franchise in India",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
@@ -536,8 +537,8 @@ class _StartupScreenState extends State<StartupScreen> {
                 children: [
                   ClipRRect(
                     borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-                    child: Image.network(
-                      "https://via.placeholder.com/300",
+                    child: Image.asset(
+                      "assets/Zepto_logo.png",
                       height: MediaQuery.of(context).size.height*0.3,
                       width: MediaQuery.of(context).size.width*2.3,
                       fit: BoxFit.cover,
@@ -549,7 +550,7 @@ class _StartupScreenState extends State<StartupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "StartUp Name",
+                          "ZEPTO",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -557,7 +558,7 @@ class _StartupScreenState extends State<StartupScreen> {
                         ),
                         SizedBox(height: 8),
                         Text(
-                          "Founder Name | Caption",
+                          "Founders: Aadit Palicha and Kaivalya Vohra \nZepto is a quick commerce platform and e-grocery company",
                           style: TextStyle(color: Colors.grey),
                         ),
                       ],
