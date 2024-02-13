@@ -70,6 +70,9 @@ dependencies:
   # Settings
   babstrap_settings_screen : ^0.1.6
 
+  #provider for managing notification delete settings
+  provider: ^6.1.1
+
 
 
 
