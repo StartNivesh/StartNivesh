@@ -2,6 +2,7 @@
 import 'package:start_nivesh/ProfileScreen.dart';
 import 'package:start_nivesh/pages/BlogScreen.dart';
 import 'package:start_nivesh/pages/ChatPage.dart';
+import 'package:start_nivesh/pages/DashBoard.dart';
 import 'package:start_nivesh/pages/DescriptionPage.dart';
 import 'package:start_nivesh/pages/LoginScreen.dart';
 import 'package:start_nivesh/pages/Notification.dart';
@@ -367,7 +368,7 @@ class HomeScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>DashboardScreen()));
                   // Navigate to dashboard screen
                 },
               ),
