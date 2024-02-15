@@ -10,33 +10,28 @@ class ForgotPassword extends StatefulWidget {
 }
 
 class _ForgotPasswordState extends State<ForgotPassword> {
-  TextEditingController emailcontroller = TextEditingController();
-
-
-  forgotpassword(String email) async {
-    if (email.isEmpty) {
-      UiHelper.CustomAlertBox(context, "Enter an email to Reset Password");
-    } else if (!isEmailValid(email)) {
-      UiHelper.CustomAlertBox(context, "Enter a valid email address");
-    } else {
-      FirebaseAuth.instance.sendPasswordResetEmail(email: email);
-    }
-  }
-
-
-  // to check if the email is in valid format
+  final TextEditingController emailController = TextEditingController();
 
   bool isEmailValid(String email) {
-    // Regular expression pattern for email validation
-    // This pattern checks for the basic structure of an email address
-    // It may not catch all edge cases, but it covers most common scenarios
-    final RegExp emailRegex =
-    RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
-
-    // Test if the email matches the regex pattern
+    final RegExp emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
     return emailRegex.hasMatch(email);
   }
 
+  void forgotPassword(BuildContext context, String email) async {
+    if (email.isEmpty) {
+      UiHelper.CustomAlertBox(context, "Enter an email to reset password");
+    } else if (!isEmailValid(email)) {
+      UiHelper.CustomAlertBox(context, "Enter a valid email address");
+    } else {
+      try {
+        await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
+        UiHelper.CustomAlertBox(
+            context, "Password reset email sent. Check your inbox.");
+      } catch (error) {
+        UiHelper.CustomAlertBox(context, "Failed to send reset email: $error");
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,12 +45,12 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.blue, // Set app bar background color
+        backgroundColor: Colors.blue,
       ),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // Center the content vertically
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               "Enter your email to reset password",
@@ -67,29 +62,31 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             ),
             SizedBox(height: 20),
             TextField(
-              controller: emailcontroller,
+              controller: emailController,
               decoration: InputDecoration(
                 labelText: "Email",
                 suffixIcon: Icon(Icons.mail),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10), // Add border radius to text field
+                  borderRadius: BorderRadius.circular(10),
                 ),
               ),
             ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                forgotpassword(emailcontroller.text.toString());
+                forgotPassword(context, emailController.text.trim());
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15 , vertical: 10),
+                padding:
+                const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: Text("Reset Password"),
               ),
               style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white, backgroundColor: Colors.blue, // Set button text color
-                padding: EdgeInsets.symmetric(vertical: 15), // Set button padding
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.blue,
+                padding: EdgeInsets.symmetric(vertical: 15),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15), // Add border radius to button
+                  borderRadius: BorderRadius.circular(15),
                 ),
               ),
             ),

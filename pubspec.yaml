@@ -51,7 +51,7 @@ dependencies:
   google_sign_in: ^6.2.1
 
   #Apple SignIn
-  sign_in_with_apple: ^5.0.0
+#  sign_in_with_apple: ^3.0.2
 
   awesome_bottom_bar: ^1.2.4
 
@@ -64,6 +64,8 @@ dependencies:
   # Firebase auth
   firebase_auth: ^4.17.4
 
+  #to add realtime firebase database
+  firebase_database: ^10.4.5
   # Trend Banner
   banner_image: ^1.0.7
 
@@ -73,6 +75,8 @@ dependencies:
   #provider for managing notification delete settings
   provider: ^6.1.1
 
+  #for cloud firebase database
+  cloud_firestore: ^4.15.4
 
 
 

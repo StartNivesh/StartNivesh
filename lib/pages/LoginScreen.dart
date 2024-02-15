@@ -1,56 +1,112 @@
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:start_nivesh/HomeScreen.dart';
 import 'package:start_nivesh/pages/Authentication/ForgetPassword.dart';
 import 'package:start_nivesh/pages/Authentication/PhoneAuth.dart';
-import 'package:start_nivesh/pages/Authentication/UiHelper.dart';
+// import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+
+
 
 class LoginScreen extends StatelessWidget {
-  BuildContext? get context => null;
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  final GoogleSignIn googleSignIn = GoogleSignIn();
 
-  Future<void> _handleGoogleSignIn(BuildContext context) async {
 
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (context) => const BottomNavigationBarExample()),
-    ); // Replace '/home' with your home screen route
-  }
 
-  Future<void> _handleAppleSignIn(BuildContext context) async {
+  //Google Auth
+  Future<User?> _handleSignUp(BuildContext context) async {
+    try {
+      final GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
+      if (googleSignInAccount != null) {
+        final GoogleSignInAuthentication googleSignInAuthentication =
+        await googleSignInAccount.authentication;
 
-  }
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleSignInAuthentication.accessToken,
+          idToken: googleSignInAuthentication.idToken,
+        );
 
-  TextEditingController emailcontroller = TextEditingController();
-  TextEditingController passwordcontroller = TextEditingController();
+        final UserCredential authResult =
+        await FirebaseAuth.instance.signInWithCredential(credential);
+        final User? user = authResult.user;
 
-  //if the email feild is empty
-  //form validation
-
-  emptyLogin(String email , String password) {
-    if (email.isEmpty) {
-      UiHelper.CustomAlertBox(context!, "Enter a valid email");
-    } else if (password.isEmpty) {
-      UiHelper.CustomAlertBox(context!, "Enter Password");
-    } else {
-      // Perform login logic here using email and password
-      // For simplicity, let's just print the email and password for now
-      print('Email: $email');
-      print('Password: $password');
-
-      // Reset text fields after successful login
-      emailcontroller.clear();
-      passwordcontroller.clear();
-
-      // Navigate to the home screen
-      Navigator.pushReplacement(
-        context!,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
-      );
+        if (user != null) {
+          // Navigate to home screen on successful sign up
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => BottomNavigationBarExample()),
+          );
+        }
+      }
+    } catch (error) {
+      print(error);
     }
   }
 
+  //Apple signup
+  // Future<void> _handleSignUp2(BuildContext context) async {
+  //   try {
+  //     final credential = await SignInWithApple.getAppleIDCredential(
+  //       scopes: [
+  //         AppleIDAuthorizationScopes.email,
+  //         AppleIDAuthorizationScopes.fullName,
+  //       ],
+  //     );
+  //
+  //     OAuthCredential credentialFirebase = OAuthProvider('apple.com').credential(
+  //       idToken: credential.identityToken,
+  //       accessToken: credential.authorizationCode,
+  //     );
+  //
+  //     final UserCredential authResult = await FirebaseAuth.instance.signInWithCredential(credentialFirebase);
+  //     final User? user = authResult.user;
+  //
+  //     if (user != null) {
+  //       // Navigate to home screen on successful sign up
+  //       Navigator.pushReplacement(
+  //         context,
+  //         MaterialPageRoute(builder: (context) => BottomNavigationBarExample()),
+  //       );
+  //     } else {
+  //       // Handle sign-up failure
+  //       showDialog(
+  //         context: context,
+  //         builder: (BuildContext context) {
+  //           return AlertDialog(
+  //             title: Text("Error"),
+  //             content: Text("Failed to sign up with Apple."),
+  //             actions: [
+  //               TextButton(
+  //                 onPressed: () => Navigator.pop(context),
+  //                 child: Text("OK"),
+  //               ),
+  //             ],
+  //           );
+  //         },
+  //       );
+  //     }
+  //   } catch (error) {
+  //     print(error);
+  //     // Handle other errors
+  //     showDialog(
+  //       context: context,
+  //       builder: (BuildContext context) {
+  //         return AlertDialog(
+  //           title: Text("Error"),
+  //           content: Text("An error occurred: $error"),
+  //           actions: [
+  //             TextButton(
+  //               onPressed: () => Navigator.pop(context),
+  //               child: Text("OK"),
+  //             ),
+  //           ],
+  //         );
+  //       },
+  //     );
+  //   }
+  // }
 
 
   @override
@@ -83,6 +139,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 40),
                 TextFormField(
+                  controller: emailController,
                   decoration: InputDecoration(
                     labelText: 'Username or Email',
                     suffixIcon: Icon(Icons.person, color: Colors.grey),
@@ -96,6 +153,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 TextFormField(
+                  controller: passwordController,
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
@@ -111,27 +169,61 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-
-                      // Implement Forgot Password logic
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>BottomNavigationBarExample()));
-
-
-                    //if the user has not entered either email or password
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
-
-
-
-                    // For simplicity, let's just print a message for now
-                    print('Login button pressed');
+                    // Perform email authentication
+                    String email = emailController.text.trim();
+                    String password = passwordController.text.trim();
+                    if (email.isEmpty || password.isEmpty) {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("Error"),
+                            content: Text("Please enter both email and password."),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: Text("OK"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                      return;
+                    }
+                    FirebaseAuth.instance.signInWithEmailAndPassword(
+                      email: email,
+                      password: password,
+                    ).then((value) {
+                      // Navigate to home screen on successful login
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => BottomNavigationBarExample()),
+                      );
+                    }).catchError((error) {
+                      // Handle login errors
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("Error"),
+                            content: Text("Failed to log in: $error"),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: Text("OK"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    });
                   },
-                  style: TextButton.styleFrom(
-
-                    padding: EdgeInsets.symmetric(vertical: 16), backgroundColor: Colors.blue,
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(vertical: 16),
+                    backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
                     ),
-                    elevation: 3,
-                    shadowColor: Colors.blue.withOpacity(0.3),
                   ),
                   child: Text(
                     'Login',
@@ -141,8 +233,10 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    // Implement Forgot Password logic
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ForgotPassword()),
+                    );
                   },
                   child: Text(
                     'Forgot Password?',
@@ -152,8 +246,10 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    // Implement Forgot Password logic
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>PhoneAuth()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PhoneAuth()),
+                    );
                   },
                   child: Text(
                     'Sign-in With Phone Number',
@@ -165,40 +261,29 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     OutlinedButton.icon(
-                      onPressed: () => _handleGoogleSignIn(context),
-                      icon: Image.asset(
-                        'assets/google_logo.png',
-                        height: 24,
-                        width: 18,
-                      ),
-                      label: Text('Google'),
+                      onPressed: () {
+                        _handleSignUp(context);
+                      },
+                      icon: Icon(Icons.mail, color: Colors.red),
+                      label: Text('Gmail'),
                       style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.red, side: BorderSide(color: Colors.red),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                        side: BorderSide(color: Colors.red), // Border color
                       ),
                     ),
-                    SizedBox(width: 20),
+                    SizedBox(width: 80), // Add space between buttons
                     OutlinedButton.icon(
-                      onPressed: () => _handleAppleSignIn(context),
-                      icon: Image.asset(
-                        'assets/apple_logo.png',
-                        height: 24,
-                        width: 18,
-                      ),
+                      onPressed: () {
+                        // _handleSignUp2(context);
+                      },
+                      icon: Icon(Icons.phone_iphone, color: Colors.black),
                       label: Text('Apple'),
                       style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.black, side: BorderSide(color: Colors.black),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                        side: BorderSide(color: Colors.black), // Border color
                       ),
                     ),
                   ],
                 ),
+
               ],
             ),
           ),
