@@ -210,7 +210,7 @@ class LoginScreen extends StatelessWidget {
                         side: BorderSide(color: Colors.red), // Border color
                       ),
                     ),
-                    SizedBox(width: 80), // Add space between buttons
+                    SizedBox(width: 30), // Add space between buttons
                     OutlinedButton.icon(
                       onPressed: () {
                         // _handleSignUp2(context);
