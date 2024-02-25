@@ -45,70 +45,6 @@ class LoginScreen extends StatelessWidget {
     }
   }
 
-  //Apple signup
-  // Future<void> _handleSignUp2(BuildContext context) async {
-  //   try {
-  //     final credential = await SignInWithApple.getAppleIDCredential(
-  //       scopes: [
-  //         AppleIDAuthorizationScopes.email,
-  //         AppleIDAuthorizationScopes.fullName,
-  //       ],
-  //     );
-  //
-  //     OAuthCredential credentialFirebase = OAuthProvider('apple.com').credential(
-  //       idToken: credential.identityToken,
-  //       accessToken: credential.authorizationCode,
-  //     );
-  //
-  //     final UserCredential authResult = await FirebaseAuth.instance.signInWithCredential(credentialFirebase);
-  //     final User? user = authResult.user;
-  //
-  //     if (user != null) {
-  //       // Navigate to home screen on successful sign up
-  //       Navigator.pushReplacement(
-  //         context,
-  //         MaterialPageRoute(builder: (context) => BottomNavigationBarExample()),
-  //       );
-  //     } else {
-  //       // Handle sign-up failure
-  //       showDialog(
-  //         context: context,
-  //         builder: (BuildContext context) {
-  //           return AlertDialog(
-  //             title: Text("Error"),
-  //             content: Text("Failed to sign up with Apple."),
-  //             actions: [
-  //               TextButton(
-  //                 onPressed: () => Navigator.pop(context),
-  //                 child: Text("OK"),
-  //               ),
-  //             ],
-  //           );
-  //         },
-  //       );
-  //     }
-  //   } catch (error) {
-  //     print(error);
-  //     // Handle other errors
-  //     showDialog(
-  //       context: context,
-  //       builder: (BuildContext context) {
-  //         return AlertDialog(
-  //           title: Text("Error"),
-  //           content: Text("An error occurred: $error"),
-  //           actions: [
-  //             TextButton(
-  //               onPressed: () => Navigator.pop(context),
-  //               child: Text("OK"),
-  //             ),
-  //           ],
-  //         );
-  //       },
-  //     );
-  //   }
-  // }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -264,8 +200,12 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {
                         _handleSignUp(context);
                       },
-                      icon: Icon(Icons.mail, color: Colors.red),
-                      label: Text('Gmail'),
+                      icon: Image.asset(
+                        'assets/google_logo.png',
+                        height: 40,
+                        width: 40,
+                      ),
+                      label: Text('Google'),
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(color: Colors.red), // Border color
                       ),
@@ -275,8 +215,12 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {
                         // _handleSignUp2(context);
                       },
-                      icon: Icon(Icons.phone_iphone, color: Colors.black),
-                      label: Text('Apple'),
+                      icon: Image.asset(
+                        'assets/facebook.png',
+                        height: 23,
+                        width: 23,
+                      ),
+                      label: Text('Facebook'),
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(color: Colors.black), // Border color
                       ),
