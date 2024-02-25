@@ -66,11 +66,12 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       height: 120,
                       width: 120,
                     ),
+                    SizedBox(height: 20),
                     Text(
                       'Welcome to Your App',
                       style: TextStyle(fontSize: 24, color: Colors.white,fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 440),
+                    SizedBox(height: 400),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
