@@ -78,6 +78,8 @@ dependencies:
   #for cloud firebase database
   cloud_firestore: ^4.15.4
 
+  animate_do: ^3.1.2
+
 
 
 dev_dependencies:
