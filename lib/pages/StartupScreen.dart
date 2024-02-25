@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:start_nivesh/ProfileScreen.dart';
+import 'package:start_nivesh/pages/ChatPage.dart';
+import 'package:start_nivesh/pages/DashBoard.dart';
+import 'package:start_nivesh/pages/LoginScreen.dart';
+import 'package:start_nivesh/pages/Notification.dart';
+import 'package:start_nivesh/pages/SearchPage.dart';
+import 'package:start_nivesh/pages/Setting.dart';
 
 class StartupScreen extends StatefulWidget {
   const StartupScreen({Key? key});
@@ -55,7 +62,7 @@ class _StartupScreenState extends State<StartupScreen> {
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>DashboardScreen()));
                   // Navigate to dashboard screen
                 },
               ),
@@ -69,7 +76,7 @@ class _StartupScreenState extends State<StartupScreen> {
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ProfileScreen()));
                   // Navigate to profile screen
                 },
               ),
@@ -118,7 +125,7 @@ class _StartupScreenState extends State<StartupScreen> {
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SettingsPage()));
                   // Navigate to settings screen
                 },
               ),
@@ -153,7 +160,7 @@ class _StartupScreenState extends State<StartupScreen> {
                   style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
                   // Add logout logic here
                 },
               ),
@@ -178,19 +185,19 @@ class _StartupScreenState extends State<StartupScreen> {
           IconButton(
             icon: Icon(Icons.notifications),
             onPressed: () {
-              // Handle notification icon tap
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>NotificationPage()));
             },
           ),
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-              // Handle search icon tap
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SearchPage()));
             },
           ),
           IconButton(
             icon: Icon(Icons.chat),
             onPressed: () {
-              // Handle chat icon tap
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>ChatScreen()));
             },
           ),
         ],
